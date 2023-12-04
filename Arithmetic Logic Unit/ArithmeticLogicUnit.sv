@@ -74,17 +74,71 @@ module ArithmeticLogicUnit
 
 			ROR:	{OutDest, OutFlags.Carry} = {InFlags.Carry, InSrc};
 
-			ADC:	OutDest = InSrc + InDest + InFlags.Carry;
+			ADC:	begin
+						OutDest = InSrc + InDest + InFlags.Carry;
+						OutFlags.Zero = (OutDest == 0);
+						OutFlags.Negative = (OutDest < 0);
+						OutFlags.Carry = (OutDest < InSrc) || (OutDest < InDest);
+						OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
+						
+						// Take most significant bits of inputs and output
+						logic msb_in_src = InSrc[DataWidth-1];
+						logic msb_in_dest = InDest[DataWidth-1];
+						logic msb_out_dest = OutDest[DataWidth-1];
 
-			SUB:	OutDest = InDest - (InSrc + InFlags.Carry);
+						OutFlags.Overflow = (~msb_out_dest & msb_in_src & msb_in_dest) | (msb_out_dest & ~msb_in_src & ~msb_in_dest);
+					end
 
-			DIV:	OutDest = $signed(InDest / InSrc);
+			SUB:	begin
+						OutDest = InDest - (InSrc + InFlags.Carry);
+						OutFlags.Zero = (OutDest == 0);
+						OutFlags.Negative = (OutDest < 0);
+						OutFlags.Carry = (InDest < (InSrc + InFlags.Carry));
+						OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
 
-			MOD:	OutDest = $signed(InDest % InSrc);
+						// Take most significant bits of inputs and output
+						logic msb_in_src = InSrc[DataWidth-1];
+						logic msb_in_dest = InDest[DataWidth-1];
+						logic msb_out_dest = OutDest[DataWidth-1];
 
-			MUL:	OutDest = $signed(InDest * InSrc);
+						OutFlags.Overflow = (~msb_out_dest & ~msb_in_src & msb_in_dest) | (msb_out_dest & msb_in_src & ~msb_in_dest);
+					end
 
-			MUH:	OutDest = $signed((InDest * InSrc) >> DataWidth);
+			DIV:	begin
+				// Check for divide by zero
+				if (InSrc != 0) begin
+					OutDest = $signed(InDest / InSrc);
+					OutFlags.Zero = (OutDest == 0);
+					OutFlags.Negative = (OutDest < 0);
+					OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
+				end else begin
+					OutDest = 0;
+					OutFlags.Zero = 1;
+					OutFlags.Negative = 0;
+					OutFlags.Parity = 1;
+				end
+			end
+
+			MOD:	begin
+						OutDest = $signed(InDest % InSrc);
+						OutFlags.Zero = (OutDest == 0);
+						OutFlags.Negative = (OutDest < 0);
+						OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
+					end
+
+			MUL:	begin
+						OutDest = $signed(InDest * InSrc);
+						OutFlags.Zero = (OutDest == 0);
+						OutFlags.Negative = (OutDest < 0);
+						OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
+					end
+
+			MUH:	begin
+						OutDest = $signed((InDest * InSrc) >> DataWidth);
+						OutFlags.Zero = (OutDest == 0);
+						OutFlags.Negative = (OutDest < 0);
+						OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
+					end
 			
 			// ***** ONLY CHANGES ABOVE THIS LINE ARE ASSESSED	*****		
 			

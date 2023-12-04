@@ -105,19 +105,19 @@ module ArithmeticLogicUnit
 					end
 
 			DIV:	begin
-				// Check for divide by zero
-				if (InSrc != 0) begin
-					OutDest = $signed(InDest / InSrc);
-					OutFlags.Zero = (OutDest == 0);
-					OutFlags.Negative = (OutDest < 0);
-					OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
-				end else begin
-					OutDest = 0;
-					OutFlags.Zero = 1;
-					OutFlags.Negative = 0;
-					OutFlags.Parity = 1;
-				end
-			end
+						// Check for divide by zero
+						if (InSrc != 0) begin
+							OutDest = $signed(InDest / InSrc);
+							OutFlags.Zero = (OutDest == 0);
+							OutFlags.Negative = (OutDest < 0);
+							OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
+						end else begin
+							OutDest = 0;
+							OutFlags.Zero = 1;
+							OutFlags.Negative = 0;
+							OutFlags.Parity = 1;
+						end
+					end
 
 			MOD:	begin
 						OutDest = $signed(InDest % InSrc);

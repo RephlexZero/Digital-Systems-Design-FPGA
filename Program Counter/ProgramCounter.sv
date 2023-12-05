@@ -17,6 +17,7 @@ module ProgramCounter (
         begin
             // Check sign bit for negative Offset, decide if add or subtract.
             if (Offset[8])
+                // Length of internalCounterValue is 16 bits, so we need to pad Offset with 7 zeros.
                 internalCounterValue <= internalCounterValue - {{7{1'b0}}, Offset};
             else
                 internalCounterValue <= internalCounterValue + {{7{1'b0}}, Offset};

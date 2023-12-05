@@ -76,6 +76,7 @@ module ArithmeticLogicUnit
 
 			ADC:	begin
 					OutDest = InSrc + InDest + InFlags.Carry;
+
 					OutFlags.Zero = (OutDest == 0);
 					OutFlags.Negative = (OutDest < 0);
 					OutFlags.Carry = (OutDest < InSrc) || (OutDest < InDest);
@@ -91,6 +92,7 @@ module ArithmeticLogicUnit
 
 			SUB:	begin
 					OutDest = InDest - (InSrc + InFlags.Carry);
+
 					OutFlags.Zero = (OutDest == 0);
 					OutFlags.Negative = (OutDest < 0);
 					OutFlags.Carry = (InDest < (InSrc + InFlags.Carry));
@@ -108,11 +110,13 @@ module ArithmeticLogicUnit
 					// Check for divide by zero
 					if (InSrc != 0) begin
 						OutDest = $signed(InDest / InSrc);
+
 						OutFlags.Zero = (OutDest == 0);
 						OutFlags.Negative = (OutDest < 0);
 						OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
 					end else begin
 						OutDest = 0;
+						
 						OutFlags.Zero = 1;
 						OutFlags.Negative = 0;
 						OutFlags.Parity = 1;
@@ -121,6 +125,7 @@ module ArithmeticLogicUnit
 
 			MOD:	begin
 					OutDest = $signed(InDest % InSrc);
+
 					OutFlags.Zero = (OutDest == 0);
 					OutFlags.Negative = (OutDest < 0);
 					OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
@@ -128,6 +133,7 @@ module ArithmeticLogicUnit
 
 			MUL:	begin
 					OutDest = $signed(InDest * InSrc);
+
 					OutFlags.Zero = (OutDest == 0);
 					OutFlags.Negative = (OutDest < 0);
 					OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
@@ -135,10 +141,11 @@ module ArithmeticLogicUnit
 
 			MUH:	begin
 					OutDest = $signed((InDest * InSrc) >> DataWidth);
+
 					OutFlags.Zero = (OutDest == 0);
 					OutFlags.Negative = (OutDest < 0);
 					OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
-				end
+			end
 			
 			// ***** ONLY CHANGES ABOVE THIS LINE ARE ASSESSED	*****		
 			

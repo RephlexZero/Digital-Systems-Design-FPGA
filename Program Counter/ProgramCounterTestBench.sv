@@ -42,6 +42,48 @@ module ProgramCounterTestBench();
 
 	initial
 	begin
+		// Test case 1: Reset
+		Reset = 1;
+		#20;
+		Reset = 0;
+		#20;
+
+		// Test case 2: LoadValue
+		LoadValue = 16'h1234;
+		LoadEnable = 1;
+		#20;
+		LoadEnable = 0;
+		#20;
+
+		// Test case 3: Offset
+		Offset = 9'h1F;
+		OffsetEnable = 1;
+		#20;
+		OffsetEnable = 0;
+		#20;
+
+		// Test case 4: Negative Offset
+		Offset = 9'hFF;
+		OffsetEnable = 1;
+		#20;
+		OffsetEnable = 0;
+		#20;
+
+		// Test case 5: Combination of inputs
+		Reset = 1;
+		LoadValue = 16'h5678;
+		LoadEnable = 1;
+		Offset = 9'h0A;
+		OffsetEnable = 1;
+		#20;
+		Reset = 0;
+		LoadEnable = 0;
+		OffsetEnable = 0;
+		#20;
+
+		$finish;
+	end
+endmodule
 
 	// add your code here to test the functionality
 	// of your program counter

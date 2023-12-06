@@ -25,6 +25,7 @@ module VgaController
 	parameter H_FRONT_PORCH = 56;
 	parameter H_SYNC_PULSE = 120;
 	parameter H_BACK_PORCH = 64;
+	
 	parameter V_DISPLAY = 600;
 	parameter V_FRONT_PORCH = 37;
 	parameter V_SYNC_PULSE = 6;

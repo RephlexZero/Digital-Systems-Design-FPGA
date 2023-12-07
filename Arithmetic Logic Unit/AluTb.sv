@@ -111,7 +111,158 @@ module AluTb();
 
 		// Put your code here to verify the instructions.
 
+		$display ("Start of MOVE tests");
+		Operation = MOVE;
 
+		InDest = 16'h0000;
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'hFFFF) $display("Error in MOVE operation at time %t",$time);
+
+		#10 InSrc = 16'h0000;
+		#1 if (OutDest != 16'h0000) $display("Error in MOVE operation at time %t",$time);
+
+		#10 InSrc = 16'hAAAA;
+		#1 if (OutDest != 16'hAAAA) $display("Error in MOVE operation at time %t",$time);
+
+		#10 InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'hFFFF) $display("Error in MOVE operation at time %t",$time);
+
+
+		$display ("Start of NOR tests");
+		Operation = NOR;
+
+		InDest = 16'h0000;
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'h0000) $display("Error in NOR operation at time %t",$time);
+
+		#10 InSrc = 16'h0000;
+		#1 if (OutDest != 16'hFFFF) $display("Error in NOR operation at time %t",$time);
+
+		#10 InSrc = 16'hAAAA;
+		#1 if (OutDest != 16'h5555) $display("Error in NOR operation at time %t",$time);
+
+		#10 InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'h0000) $display("Error in NOR operation at time %t",$time);
+
+
+		$display ("Start of ROR tests");
+		Operation = ROR;
+
+		InDest = 16'h0000;
+		InFlags.Carry = '0;
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'h7FFF) $display("Error in ROR operation at time %t",$time);
+
+		#10 InFlags.Carry = '1;
+		#1 if (OutDest != 16'hFFFF) $display("Error in ROR operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InFlags.Carry = '0;
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'h7FFF) $display("Error in ROR operation at time %t",$time);
+
+		#10 InFlags.Carry = '1;
+		#1 if (OutDest != 16'hFFFF) $display("Error in ROR operation at time %t",$time);
+
+
+		$display ("Start of SUB tests");
+		Operation = SUB;
+
+		InDest = 16'h0000;
+		InFlags.Carry = '0;
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'h0001) $display("Error in SUB operation at time %t",$time);
+
+		#10 InFlags.Carry = '1;
+		#1 if (OutDest != 16'h0000) $display("Error in SUB operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InFlags.Carry = '0;
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'hAAAB) $display("Error in SUB operation at time %t",$time);
+
+		#10 InFlags.Carry = '1;
+		#1 if (OutDest != 16'hAAAA) $display("Error in SUB operation at time %t",$time);
+
+		
+		$display ("Start of DIV tests");
+		Operation = DIV;
+
+		InDest = 16'h0000;
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'h0000) $display("Error in DIV operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'h0000) $display("Error in DIV operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InSrc = 16'h0001;
+		#1 if (OutDest != 16'hAAAA) $display("Error in DIV operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InSrc = 16'h0002;
+		#1 if (OutDest != 16'h5555) $display("Error in DIV operation at time %t",$time);
+
+
+		$display ("Start of MOD tests");
+		Operation = MOD;
+
+		InDest = 16'h0000;	
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'h0000) $display("Error in MOD operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'hAAAA) $display("Error in MOD operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InSrc = 16'h0001;
+		#1 if (OutDest != 16'h0000) $display("Error in MOD operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InSrc = 16'h0002;
+		#1 if (OutDest != 16'h0000) $display("Error in MOD operation at time %t",$time);
+
+
+		$display ("Start of MUL tests");
+		Operation = MUL;
+
+		InDest = 16'h0000;
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'h0000) $display("Error in MUL operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'h5554) $display("Error in MUL operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InSrc = 16'h0001;
+		#1 if (OutDest != 16'hAAAA) $display("Error in MUL operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InSrc = 16'h0002;
+		#1 if (OutDest != 16'h1554) $display("Error in MUL operation at time %t",$time);
+
+
+		$display ("Start of MUH tests");
+		Operation = MUH;
+
+		InDest = 16'h0000;
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'h0000) $display("Error in MUH operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InSrc = 16'hFFFF;
+		#1 if (OutDest != 16'h5554) $display("Error in MUH operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InSrc = 16'h0001;
+		#1 if (OutDest != 16'hAAAA) $display("Error in MUH operation at time %t",$time);
+
+		#10 InDest = 16'hAAAA;
+		InSrc = 16'h0002;
+		#1 if (OutDest != 16'h1554) $display("Error in MUH operation at time %t",$time);
 
 		// End of instruction simulation
 

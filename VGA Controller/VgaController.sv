@@ -38,10 +38,10 @@ module VgaController
 			vCount <= 0;
 		end else begin
 			// If we are at the end of the row, reset the horizontal counter
-			if (hCount == H_DISPLAY + H_FRONT_PORCH + H_SYNC_PULSE + H_BACK_PORCH - 1) begin
+			if (hCount == H_DISPLAY + H_FRONT_PORCH + H_SYNC_PULSE + H_BACK_PORCH) begin
 				hCount <= 0;
 				// If we are at the end of the screen, reset the vertical counter
-				if (vCount == V_DISPLAY + V_FRONT_PORCH + V_SYNC_PULSE + V_BACK_PORCH - 1) begin
+				if (vCount == V_DISPLAY + V_FRONT_PORCH + V_SYNC_PULSE + V_BACK_PORCH) begin
 					vCount <= 0;
 				end else begin
 					vCount <= vCount + 1;
@@ -53,10 +53,10 @@ module VgaController
 	end
 
 	// Generate sync and blank signals
-	assign hSync_n = (hCount >= H_DISPLAY + H_FRONT_PORCH) && (hCount < H_DISPLAY + H_FRONT_PORCH + H_SYNC_PULSE);
-	assign vSync_n = (vCount >= V_DISPLAY + V_FRONT_PORCH) && (vCount < V_DISPLAY + V_FRONT_PORCH + V_SYNC_PULSE);
-	assign sync_n = hSync_n || vSync_n;
-	assign blank_n = sync_n;
+	assign hSync_n = (hCount < H_DISPLAY + H_FRONT_PORCH) && (hCount >= H_DISPLAY + H_FRONT_PORCH + H_SYNC_PULSE);
+	assign vSync_n = (vCount < V_DISPLAY + V_FRONT_PORCH) && (vCount >= V_DISPLAY + V_FRONT_PORCH + V_SYNC_PULSE);
+	assign sync_n = ~hSync_n || ~vSync_n;
+	assign blank_n = (vCount < V_DISPLAY) && (hCount < H_DISPLAY);
 
 	// Output next X and Y pixel positions if not blanking
 	always_comb begin

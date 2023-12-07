@@ -149,7 +149,7 @@ module ArithmeticLogicUnit
 			
 			// ***** ONLY CHANGES ABOVE THIS LINE ARE ASSESSED	*****		
 			
-			default:	OutDest = '0;
+			default:	OutDest = b'0;
 			
 		endcase;
 

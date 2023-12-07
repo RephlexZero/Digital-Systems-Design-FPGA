@@ -1,6 +1,6 @@
 // ArithmeticLogicUnit
 // This is a basic implementation of the essential operations needed
-// in the ALU. Adding futher instructions to this file will increase 
+// in the ALU. Adding further instructions to this file will increase 
 // your marks.
 
 // Load information about the instruction set. 
@@ -75,34 +75,39 @@ module ArithmeticLogicUnit
 			ROR:	{OutDest, OutFlags.Carry} = {InFlags.Carry, InSrc};
 
 			ADC:	begin
+					// Take most significant bits of inputs and output
+					automatic logic msb_in_src = InSrc[DataWidth-1];
+					automatic logic msb_in_dest = InDest[DataWidth-1];
+					automatic logic msb_out_dest = OutDest[DataWidth-1];
+
 					OutDest = InSrc + InDest + InFlags.Carry;
 
 					OutFlags.Zero = (OutDest == 0);
 					OutFlags.Negative = (OutDest < 0);
 					OutFlags.Carry = (OutDest < InSrc) || (OutDest < InDest);
-					OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
-					
-					// Take most significant bits of inputs and output
-					logic msb_in_src = InSrc[DataWidth-1];
-					logic msb_in_dest = InDest[DataWidth-1];
-					logic msb_out_dest = OutDest[DataWidth-1];
-
+					OutFlags.Parity = 1;
+					for (int i = 0; i < DataWidth; i++) begin
+						OutFlags.Parity = OutFlags.Parity ^ OutDest[i];
+					end
 					OutFlags.Overflow = (~msb_out_dest & msb_in_src & msb_in_dest) | (msb_out_dest & ~msb_in_src & ~msb_in_dest);
 				end
 
 			SUB:	begin
+					// Take most significant bits of inputs and output
+					automatic logic msb_in_src = InSrc[DataWidth-1];
+					automatic logic msb_in_dest = InDest[DataWidth-1];
+					automatic logic msb_out_dest = OutDest[DataWidth-1];
+
+
 					OutDest = InDest - (InSrc + InFlags.Carry);
 
 					OutFlags.Zero = (OutDest == 0);
 					OutFlags.Negative = (OutDest < 0);
 					OutFlags.Carry = (InDest < (InSrc + InFlags.Carry));
-					OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
-
-					// Take most significant bits of inputs and output
-					logic msb_in_src = InSrc[DataWidth-1];
-					logic msb_in_dest = InDest[DataWidth-1];
-					logic msb_out_dest = OutDest[DataWidth-1];
-
+					OutFlags.Parity = 1;
+					for (int i = 0; i < DataWidth; i++) begin
+						OutFlags.Parity = OutFlags.Parity ^ OutDest[i];
+					end
 					OutFlags.Overflow = (~msb_out_dest & ~msb_in_src & msb_in_dest) | (msb_out_dest & msb_in_src & ~msb_in_dest);
 				end
 
@@ -113,7 +118,10 @@ module ArithmeticLogicUnit
 
 						OutFlags.Zero = (OutDest == 0);
 						OutFlags.Negative = (OutDest < 0);
-						OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
+						OutFlags.Parity = 1;
+						for (int i = 0; i < DataWidth; i++) begin
+						OutFlags.Parity = OutFlags.Parity ^ OutDest[i];
+					end
 					end else begin
 						OutDest = 0;
 						
@@ -128,7 +136,10 @@ module ArithmeticLogicUnit
 
 					OutFlags.Zero = (OutDest == 0);
 					OutFlags.Negative = (OutDest < 0);
-					OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
+					OutFlags.Parity = 1;
+					for (int i = 0; i < DataWidth; i++) begin
+						OutFlags.Parity = OutFlags.Parity ^ OutDest[i];
+					end
 				end
 
 			MUL:	begin
@@ -136,7 +147,10 @@ module ArithmeticLogicUnit
 
 					OutFlags.Zero = (OutDest == 0);
 					OutFlags.Negative = (OutDest < 0);
-					OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
+					OutFlags.Parity = 1;
+					for (int i = 0; i < DataWidth; i++) begin
+						OutFlags.Parity = OutFlags.Parity ^ OutDest[i];
+					end
 				end
 
 			MUH:	begin
@@ -144,12 +158,16 @@ module ArithmeticLogicUnit
 
 					OutFlags.Zero = (OutDest == 0);
 					OutFlags.Negative = (OutDest < 0);
-					OutFlags.Parity = ($countbits(OutDest) % 2 == 0);
-			end
+					OutFlags.Parity = 1;
+					for (int i = 0; i < DataWidth; i++) begin
+						OutFlags.Parity = OutFlags.Parity ^ OutDest[i];
+					end
+				
+				end
 			
 			// ***** ONLY CHANGES ABOVE THIS LINE ARE ASSESSED	*****		
 			
-			default:	OutDest = b'0;
+			default:	OutDest = '0;
 			
 		endcase;
 

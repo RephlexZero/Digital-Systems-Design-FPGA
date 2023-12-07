@@ -1,0 +1,56 @@
+// delay and blink LED
+//
+// Assembler test - delay and blink LED
+// U M.H.
+// 01/12/21
+
+LIL R0,0      // Set R0 to the address of the switches (0xC000)
+LIU R0,0x38   
+LIL R1,0      // Set R1 to the Address of the LEDs (0xC200)
+LIU R1,0x08 
+LIU R1,0x38
+LIL R2,0
+LIU R2,0x28	// Set R3 to the address of the RAM memory (0x4000)
+
+
+LOAD R10,(R0)   // Get the switch values to R10 - Load instructions must be done twice
+LOAD R10,(R0)
+
+
+// Clock frequency is 10MHz
+
+LIL R11,0x3F
+
+// 5 sec delay
+//LIL R14,0x02
+//LIU R14,0x0C
+
+// 1 sec delay
+LIL R14,0x16
+LIU R14,0x02
+
+LIL R12,1
+
+LIL R3,0x00    // start for-loop for 1 sec delay to switch off the LED
+STORE (R1),R3  // store 0 in LEDs
+MOVE R13,R14
+SUB R13,R12
+JR Z,6         // if outer loop finished, then jump 6 positions
+LIL FL,0
+MOVE R15,R11
+SUB R15,R12
+JR Z,-6        // if inner loop finished, then jump -4 positions
+LIL FL,0
+JR A,-4
+LIL R3,0x01    // start for-loop for 1 sec delay to switch on the LED
+STORE (R1),R3  // store 1 in LEDs
+MOVE R13,R14
+SUB R13,R12
+JR Z,6         // if outer loop finished, then jump 6 positions
+LIL FL,0
+MOVE R15,R11
+SUB R15,R12
+JR Z,-6        // if inner loop finished, then jump -4 positions
+LIL FL,0
+JR A,-4
+LIL FL,0

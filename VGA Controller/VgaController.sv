@@ -37,15 +37,15 @@ module VgaController
 			hCount <= 0;
 			vCount <= 0;
 		end else begin
-			// If we are at the end of the row, reset the horizontal counter
+			// If we are at the end of the row, reset the horizontal counter and increment the vertical counter
 			if (hCount == H_DISPLAY + H_FRONT_PORCH + H_SYNC_PULSE + H_BACK_PORCH) begin
 				hCount <= 0;
-				// If we are at the end of the screen, reset the vertical counter
-				if (vCount == V_DISPLAY + V_FRONT_PORCH + V_SYNC_PULSE + V_BACK_PORCH) begin
-					vCount <= 0;
-				end else begin
-					vCount <= vCount + 1;
-				end
+				vCount <= vCount + 1;
+			// If we are at the end of the screen, reset the vertical counter
+			if (vCount == V_DISPLAY + V_FRONT_PORCH + V_SYNC_PULSE + V_BACK_PORCH) begin
+				vCount <= 0;
+			end
+			// Otherwise, increment the horizontal counter
 			end else begin
 				hCount <= hCount + 1;
 			end
@@ -58,14 +58,17 @@ module VgaController
 	assign sync_n = ~hSync_n || ~vSync_n;
 	assign blank_n = (vCount < V_DISPLAY) && (hCount < H_DISPLAY);
 
-	// Output next X and Y pixel positions if not blanking
+	// Output next X and Y pixel positions if not in blanking period
 	always_comb begin
-		if (!blank_n) begin
-			nextX = 0;
-			nextY = 0;
-		end else begin
-			nextX = hCount;
+		if (vCount < V_DISPLAY) begin
 			nextY = vCount;
+		end else begin
+			nextY = 0;
+		end
+		if (hCount < H_DISPLAY) begin
+			nextX = hCount;
+		end else begin
+			nextX = 0;
 		end
 	end
 

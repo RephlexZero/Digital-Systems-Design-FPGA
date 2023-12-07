@@ -84,16 +84,3 @@ module ProgramCounterTestBench();
 		$finish;
 	end
 endmodule
-
-	// add your code here to test the functionality
-	// of your program counter
-
-	// you need test different values for the input signals:
-	// Reset, LoadValue, LoadEnable, OffsetEnable
-	// and Offet. Then, you can check whether the output signal
-	// CounterValue shows the correct value, otherwise, you need
-	// to fix your ProgramCounter module.
-	
-	end
-endmodule
-	

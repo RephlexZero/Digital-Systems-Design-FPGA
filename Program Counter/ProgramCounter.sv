@@ -17,7 +17,7 @@ module ProgramCounter (
         begin
             // Check sign bit for negative Offset, decide if add or subtract.
             if (Offset[8])
-                // Length of internalCounterValue is 16 bits, so we need to pad Offset with 7 zeros.
+                // Already a signed value, no need to use $signed()
                 internalCounterValue <= internalCounterValue - Offset;
             else
                 internalCounterValue <= internalCounterValue + Offset;

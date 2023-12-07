@@ -52,14 +52,7 @@ module RegisterFileTB;
         AddressA = 6'b001100;
         AddressB = 6'b010101;
 
-        // Wait for a few clock cycles
         #10;
-
-        // Display initial register values
-        $display("Initial Register Values:");
-        for (int i = 0; i < RegisterHeight; i++) begin
-            $display("Register[%0d] = %h", i, dut.Registers[i]);
-        end
 
         // Perform write operation
         #10;
@@ -67,22 +60,14 @@ module RegisterFileTB;
         WriteData = 16'h1234;
         AddressA = 6'b001100;
 
-        // Wait for a few clock cycles
         #10;
 
         // Perform read operation
         WriteEnable = 0;
         AddressA = 6'b001100;
-        AddressB = 6'b010101;
+        AddressB = 6'b001100;
 
-        // Wait for a few clock cycles
         #10;
-
-        // Display final register values
-        $display("Final Register Values:");
-        for (int i = 0; i < RegisterHeight; i++) begin
-            $display("Register[%0d] = %h", i, dut.Registers[i]);
-        end
 
         // End simulation
         $finish;

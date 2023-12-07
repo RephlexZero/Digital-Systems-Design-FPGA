@@ -5,7 +5,7 @@ module RegisterFile #(
 )(
     input logic Clock, WriteEnable,
     input logic [RegisterWidth-1:0] WriteData,
-    input logic [AddressWidth-1:0] AddressA, AddressB;
+    input logic [AddressWidth-1:0] AddressA, AddressB,
     output logic [RegisterWidth-1:0] ReadDataA, ReadDataB
 );
     // Define 1-D array of RegisterHeight length and RegisterWidth element width

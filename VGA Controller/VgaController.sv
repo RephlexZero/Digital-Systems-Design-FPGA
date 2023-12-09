@@ -20,12 +20,6 @@ module VgaController
 	// use this signal as counter for the vertical axis
 	logic [ 9:0] vCount;
 
-	// Initialize counters
-    initial begin
-        hCount = 0;
-        vCount = 0;
-    end
-
 	// VGA timing parameters
 	parameter H_DISPLAY = 800;
 	parameter H_FRONT_PORCH = 56;

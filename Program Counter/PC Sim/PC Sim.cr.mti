@@ -1,0 +1,26 @@
+{C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Program Counter/ProgramCounterTestBench.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Program Counter/ProgramCounterTestBench.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ProgramCounterTestBench
+
+Top level modules:
+	ProgramCounterTestBench
+
+} {} {}} {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Program Counter/ProgramCounter.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Program Counter/ProgramCounter.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ProgramCounter
+
+Top level modules:
+	ProgramCounter
+
+} {} {}} {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Program Counter/PcFpgaTop.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Program Counter/PcFpgaTop.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module PcFpgaTop
+-- Compiling module SevenSegmentDecoder
+-- Compiling module DecimalSegmentDecoder
+-- Compiling module DecimalDisplayFiveDigit
+
+Top level modules:
+	PcFpgaTop
+	SevenSegmentDecoder
+
+} {} {}}

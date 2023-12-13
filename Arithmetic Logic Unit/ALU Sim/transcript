@@ -1,0 +1,55 @@
+# Compile of AluFpgaTop.sv failed with 1 errors.
+# Compile of AluTb.sv failed with 5 errors.
+# Compile of ArithmeticLogicUnit.sv failed with 2 errors.
+# Compile of InstructionSet.sv was successful.
+# 4 compiles, 3 failed with 8 errors.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv failed with 9 errors.
+# Compile of InstructionSet.sv was successful.
+# 4 compiles, 1 failed with 9 errors.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv failed with 10 errors.
+# Compile of InstructionSet.sv was successful.
+# 4 compiles, 1 failed with 10 errors.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv failed with 10 errors.
+# Compile of InstructionSet.sv was successful.
+# 4 compiles, 1 failed with 10 errors.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv failed with 10 errors.
+# Compile of InstructionSet.sv was successful.
+# 4 compiles, 1 failed with 10 errors.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv failed with 8 errors.
+# Compile of InstructionSet.sv was successful.
+# 4 compiles, 1 failed with 8 errors.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv failed with 6 errors.
+# Compile of InstructionSet.sv was successful.
+# 4 compiles, 1 failed with 6 errors.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv failed with 6 errors.
+# Compile of InstructionSet.sv was successful.
+# 4 compiles, 1 failed with 6 errors.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv failed with 18 errors.
+# Compile of InstructionSet.sv was successful.
+# 4 compiles, 1 failed with 18 errors.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# 4 compiles, 0 failed with no errors.

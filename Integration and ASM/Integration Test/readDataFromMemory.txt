@@ -1,0 +1,40 @@
+// Load and store data using Data memory
+//
+// Assembler test - Load and store data using Data memory
+// U M.H.
+// 01/12/21
+//
+LIL R0, 0      // Set R0 to the address of the switches (0xC000)
+LIU R0, 0x38   
+LIL R1, 0      // Set R1 to the Address of the LEDs (0xC200)
+LIU R1, 0x08 
+LIU R1, 0x38
+
+LIL R3, 0x00      // Set R3 to the address of the data memory (0x0000)
+LIL R5, 0x02      // Set R5 to the address of the data memory (0x0002)
+
+
+LOAD R2,(R0)   // Get the switch values to R2 - Load instructions must be done twice
+LOAD R2,(R0)
+
+STORE (R1), R2
+STORE (R3), R2
+
+LIL R4, 0x01
+ADC R4, R2
+STORE (R5), R4
+
+LOAD R6, (R5)
+LOAD R6, (R5)
+
+ADC R6, R6
+LIL R7, 0x05
+STORE (R7), R6
+
+LOAD R8, (R7)
+LOAD R8, (R7)
+
+LIL R9, 0x02
+MUL R8, R9
+LIL R10, 0x06
+STORE (R10), R8

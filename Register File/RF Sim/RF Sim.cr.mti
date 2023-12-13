@@ -1,0 +1,15 @@
+{C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Register File/RegisterFileTb.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Register File/RegisterFileTb.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module RegisterFileTB
+
+Top level modules:
+	RegisterFileTB
+
+} {} {}} {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Register File/RegisterFile.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Register File/RegisterFile.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module RegisterFile
+
+Top level modules:
+	RegisterFile
+
+} {} {}}

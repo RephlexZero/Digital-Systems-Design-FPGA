@@ -1,0 +1,16 @@
+// Switch and LEDs example.txt
+//
+// Assembler test - load switch inputs to LEDS
+// U M.H.
+// 01/12/21
+
+
+LIL R0, 0      // Set R0 to the address of the switches (0xC000)
+LIU R0, 0x38   
+LIL R1, 0      // Set R1 to the Address of the LEDs (0xC200)
+LIU R1, 0x08 
+LIU R1, 0x38
+
+LOAD R2,(R0)   // Get the switch values to R2 - Load instructions must be done twice
+LOAD R2,(R0)   
+STORE (R1),R2  // Copy R2 to the LEDs

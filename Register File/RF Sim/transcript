@@ -1,0 +1,26 @@
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.ProgramCounterTestBench
+# vsim -voptargs="+acc" work.ProgramCounterTestBench 
+# Start time: 11:15:39 on Dec 07,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.ProgramCounterTestBench(fast)
+# Loading work.ProgramCounter(fast)
+add wave -position insertpoint sim:/ProgramCounterTestBench/*
+run
+add wave -position insertpoint vsim:/VgaTb/*
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# End time: 12:36:14 on Dec 07,2023, Elapsed time: 1:20:35
+# Errors: 0, Warnings: 7
+# Closing project C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Program Counter/PC Sim/PC Sim.mpf
+# reading C:/intelFPGA/22.1std/questa_fse/win64/../modelsim.ini

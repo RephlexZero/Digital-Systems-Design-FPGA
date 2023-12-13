@@ -1,0 +1,100 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/js3910/OneDrive - University of Bath/Documents/EE20021
+T_opt
+!s110 1701953538
+VGgh=2Qal4?fR]ooKnA4Q;3
+04 5 4 work VgaTb fast 0
+=1-9c7befa7a12f-6571c002-109-2f90
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+R1
+vVgaController
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1701955243
+!i10b 1
+!s100 XHYmjNK?=]2>QnEcVOZLe3
+I>@k4HC7zZbCDW@e:choE40
+S1
+Z5 dC:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/VGA Controller/VGA Sim
+w1701955222
+8C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/VGA Controller/VgaController.sv
+FC:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/VGA Controller/VgaController.sv
+!i122 9
+L0 5 71
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2021.2;73
+r1
+!s85 0
+31
+!s108 1701955242.000000
+!s107 C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/VGA Controller/VgaController.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/VGA Controller/VgaController.sv|
+!i113 0
+Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@vga@controller
+vVgaTb
+R3
+R4
+!i10b 1
+!s100 lR;>cSFJJJ>8XS=UkEk]l2
+IllfZXbY1X0a@mli=hlPaF1
+S1
+R5
+Z9 w1701944590
+8C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/VGA Controller/VgaTb.sv
+FC:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/VGA Controller/VgaTb.sv
+!i122 10
+L0 3 39
+R6
+R7
+r1
+!s85 0
+31
+Z10 !s108 1701955243.000000
+!s107 C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/VGA Controller/VgaTb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/VGA Controller/VgaTb.sv|
+!i113 0
+R8
+R2
+n@vga@tb
+vVgaTopFPGA
+R3
+R4
+!i10b 1
+!s100 6z_@11e2Sg;oSn^2XW8jU2
+Ijz;V_<OP=EhCnWb;nFco31
+S1
+R5
+R9
+8C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/VGA Controller/VgaTopFPGA.sv
+FC:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/VGA Controller/VgaTopFPGA.sv
+!i122 11
+L0 10 45
+R6
+R7
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/VGA Controller/VgaTopFPGA.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/VGA Controller/VgaTopFPGA.sv|
+!i113 0
+R8
+R2
+n@vga@top@f@p@g@a

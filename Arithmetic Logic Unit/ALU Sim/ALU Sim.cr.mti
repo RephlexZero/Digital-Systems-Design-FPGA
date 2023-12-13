@@ -1,0 +1,38 @@
+{C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Arithmetic Logic Unit/AluFpgaTop.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Arithmetic Logic Unit/AluFpgaTop.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package AluFpgaTop_sv_unit
+-- Importing package InstructionSetPkg
+-- Compiling module SignedDecoder
+-- Compiling module AluFpgaTop
+
+Top level modules:
+	AluFpgaTop
+
+} {} {}} {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Arithmetic Logic Unit/ArithmeticLogicUnit.sv} {2 {vlog -work work -vopt -sv -stats=none {C:\Users\js3910\OneDrive - University of Bath\Documents\EE20021\Digital-Systems-Design-FPGA\Arithmetic Logic Unit\ArithmeticLogicUnit.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+** Warning: C:\Users\js3910\OneDrive - University of Bath\Documents\EE20021\Digital-Systems-Design-FPGA\Arithmetic Logic Unit\ArithmeticLogicUnit.sv(19): (vlog-13314) Defaulting port 'InFlags' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling package ArithmeticLogicUnit_sv_unit
+-- Importing package InstructionSetPkg
+-- Compiling module ArithmeticLogicUnit
+** Warning: C:\Users\js3910\OneDrive - University of Bath\Documents\EE20021\Digital-Systems-Design-FPGA\Arithmetic Logic Unit\ArithmeticLogicUnit.sv(19): (vlog-13314) Defaulting port 'InFlags' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+
+Top level modules:
+	ArithmeticLogicUnit
+
+} {} {}} {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Arithmetic Logic Unit/AluTb.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Arithmetic Logic Unit/AluTb.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package AluTb_sv_unit
+-- Importing package InstructionSetPkg
+-- Compiling module AluTb
+
+Top level modules:
+	AluTb
+
+} {} {}} {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Arithmetic Logic Unit/InstructionSet.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/js3910/OneDrive - University of Bath/Documents/EE20021/Digital-Systems-Design-FPGA/Arithmetic Logic Unit/InstructionSet.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package InstructionSetPkg
+
+Top level modules:
+	--none--
+
+} {} {}}

@@ -1,0 +1,32 @@
+// Read image from data memory using 16K Depth memory
+//
+// Assembler test - Read image from data memory using 16K Depth memory
+// U M.H.
+// 01/12/21
+//
+LIL R0, 0      // Set R0 to the address of the switches (0xC000)
+LIU R0, 0x38   
+LIL R1, 0      // Set R1 to the Address of the LEDs (0xC200)
+LIU R1, 0x08 
+LIU R1, 0x38
+LIL R3, 0
+LIU R3, 0x28	// Set R3 to the address of the RAM memory (0x4000)
+
+
+// for 3FFF
+LIL R5, 0x3F
+LIU R5, 0x27
+LIL R4, 0	
+
+LIL R6, 0x01
+LIL FL, 0
+ADC R4, R6
+LOAD R9, (R4)
+LOAD R9, (R4)
+LIL FL, 0
+STORE (R3), R9
+ADC R3, R6
+LIL FL, 0
+SUB R5, R6
+JR NZ, -11
+LIL R6, 1

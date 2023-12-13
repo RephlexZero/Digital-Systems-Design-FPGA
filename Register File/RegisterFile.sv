@@ -13,14 +13,14 @@ module RegisterFile #(
 
     // Async read outputs
     always_comb begin
-        ReadDataA <= Registers[AddressA];
-        ReadDataB <= Registers[AddressB];
+        ReadDataA = Registers[AddressA];
+        ReadDataB = Registers[AddressB];
     end
 
     // Clocked writing 
     always_ff @(posedge Clock) begin
         if (WriteEnable) begin
-            Registers[AddressA] <= WriteData; 
+            Registers[AddressA] <= WriteData;
         end
     end
 endmodule

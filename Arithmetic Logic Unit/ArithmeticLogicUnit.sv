@@ -26,7 +26,7 @@ module ArithmeticLogicUnit
 	// InSrc and InDest are the values in the source and destination
 	// registers at the start of the instruction.
 	input  signed [DataWidth-1:0] InSrc,
-	input  signed [DataWidth-1:0]	InDest,
+	input  signed [DataWidth-1:0] InDest,
 	
 	// OutDest is the result of the ALU operation that is written 
 	// into the destination register at the end of the operation.
@@ -52,14 +52,14 @@ module ArithmeticLogicUnit
 			
 			NAND:    OutDest = ~(InSrc & InDest);
 
-			LIL:	 OutDest = $signed(InImm);
+			LIL:	 OutDest = InImm;
 
 			LIU:
 				begin
 					if (InImm[ImmediateWidth - 1] ==  1)
 						OutDest = {InImm[ImmediateWidth - 2:0], InDest[ImmediateHighStart - 1:0]};
 					else if  (InImm[ImmediateWidth - 1] ==  0)	
-						OutDest = $signed({InImm[ImmediateWidth - 2:0], InDest[ImmediateMidStart - 1:0]});
+						OutDest = {InImm[ImmediateWidth - 2:0], InDest[ImmediateMidStart - 1:0]};
 					else
 						OutDest = InDest;	
 				end
@@ -82,13 +82,10 @@ module ArithmeticLogicUnit
 
 					OutDest = InSrc + InDest + InFlags.Carry;
 
-					OutFlags.Zero = (OutDest == 0);
-					OutFlags.Negative = (OutDest < 0);
+					OutFlags.Zero = OutDest == 0;
+					OutFlags.Negative = OutDest < 0;
 					OutFlags.Carry = (OutDest < InSrc) || (OutDest < InDest);
-					OutFlags.Parity = 1;
-					for (int i = 0; i < DataWidth; i++) begin
-						OutFlags.Parity = OutFlags.Parity ^ OutDest[i];
-					end
+					OutFlags.Parity = ~^OutDest;
 					OutFlags.Overflow = (~msb_out_dest & msb_in_src & msb_in_dest) | (msb_out_dest & ~msb_in_src & ~msb_in_dest);
 				end
 
@@ -101,27 +98,21 @@ module ArithmeticLogicUnit
 
 					OutDest = InDest - (InSrc + InFlags.Carry);
 
-					OutFlags.Zero = (OutDest == 0);
-					OutFlags.Negative = (OutDest < 0);
-					OutFlags.Carry = (InDest < (InSrc + InFlags.Carry));
-					OutFlags.Parity = 1;
-					for (int i = 0; i < DataWidth; i++) begin
-						OutFlags.Parity = OutFlags.Parity ^ OutDest[i];
-					end
+					OutFlags.Zero = OutDest == 0;
+					OutFlags.Negative = OutDest < 0;
+					OutFlags.Carry = InDest < (InSrc + InFlags.Carry);
+					OutFlags.Parity = ~^OutDest;
 					OutFlags.Overflow = (~msb_out_dest & ~msb_in_src & msb_in_dest) | (msb_out_dest & msb_in_src & ~msb_in_dest);
 				end
 
 			DIV:	begin
 					// Check for divide by zero
 					if (InSrc != 0) begin
-						OutDest = $signed(InDest / InSrc);
+						OutDest = InDest / InSrc;
 
-						OutFlags.Zero = (OutDest == 0);
-						OutFlags.Negative = (OutDest < 0);
-						OutFlags.Parity = 1;
-						for (int i = 0; i < DataWidth; i++) begin
-						OutFlags.Parity = OutFlags.Parity ^ OutDest[i];
-					end
+						OutFlags.Zero = OutDest == 0;
+						OutFlags.Negative = OutDest < 0;
+						OutFlags.Parity = ~^OutDest;
 					end else begin
 						OutDest = 0;
 						
@@ -132,36 +123,27 @@ module ArithmeticLogicUnit
 				end
 
 			MOD:	begin
-					OutDest = $signed(InDest % InSrc);
+					OutDest = InDest % InSrc;
 
-					OutFlags.Zero = (OutDest == 0);
-					OutFlags.Negative = (OutDest < 0);
-					OutFlags.Parity = 1;
-					for (int i = 0; i < DataWidth; i++) begin
-						OutFlags.Parity = OutFlags.Parity ^ OutDest[i];
-					end
+					OutFlags.Zero = OutDest == 0;
+					OutFlags.Negative = OutDest < 0;
+					OutFlags.Parity = ~^OutDest;
 				end
 
 			MUL:	begin
-					OutDest = $signed(InDest * InSrc);
+					OutDest = InDest * InSrc;
 
-					OutFlags.Zero = (OutDest == 0);
-					OutFlags.Negative = (OutDest < 0);
-					OutFlags.Parity = 1;
-					for (int i = 0; i < DataWidth; i++) begin
-						OutFlags.Parity = OutFlags.Parity ^ OutDest[i];
-					end
+					OutFlags.Zero = OutDest == 0;
+					OutFlags.Negative = 0;
+					OutFlags.Parity = ~^OutDest;
 				end
 
 			MUH:	begin
-					OutDest = $signed((InDest * InSrc) >> DataWidth);
+					OutDest = (InDest * InSrc) >> DataWidth;
 
-					OutFlags.Zero = (OutDest == 0);
-					OutFlags.Negative = (OutDest < 0);
-					OutFlags.Parity = 1;
-					for (int i = 0; i < DataWidth; i++) begin
-						OutFlags.Parity = OutFlags.Parity ^ OutDest[i];
-					end
+					OutFlags.Zero = OutDest == 0;
+					OutFlags.Negative = OutDest < 0;
+					OutFlags.Parity = ~^OutDest;
 				
 				end
 			

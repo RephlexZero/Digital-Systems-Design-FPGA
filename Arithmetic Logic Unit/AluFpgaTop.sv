@@ -40,7 +40,7 @@ module SignedDecoder
 			 3: 		{Upper,Lower} = ~(14'b00000001001111);
 			 4: 		{Upper,Lower} = ~(14'b00000001100110);
 			 5: 		{Upper,Lower} = ~(14'b00000001101101);
-			 6:		{Upper,Lower} = ~(14'b00000001111101);
+			 6:			{Upper,Lower} = ~(14'b00000001111101);
 			 7: 		{Upper,Lower} = ~(14'b00000000000111);
 			default:	{Upper,Lower} = ~(14'b00000000000000);
 		endcase

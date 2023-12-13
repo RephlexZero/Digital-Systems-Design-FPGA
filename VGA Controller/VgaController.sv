@@ -44,10 +44,10 @@ module VgaController
 			vCount <= 0;
 		end else begin
 			// If we are at the end of the row, reset the horizontal counter and increment the vertical counter
-			if (hCount > H_DISPLAY + H_FRONT_PORCH + H_SYNC_PULSE + H_BACK_PORCH - 1) begin
+			if (hCount >= H_DISPLAY + H_FRONT_PORCH + H_SYNC_PULSE + H_BACK_PORCH - 1) begin
 				hCount <= 0;
 				// If we are at the end of the screen, reset the vertical counter
-				if (vCount > V_DISPLAY + V_FRONT_PORCH + V_SYNC_PULSE + V_BACK_PORCH - 1) begin
+				if (vCount >= V_DISPLAY + V_FRONT_PORCH + V_SYNC_PULSE + V_BACK_PORCH - 1) begin
 					vCount <= 0;
 				end else begin
 					vCount <= vCount + 1;

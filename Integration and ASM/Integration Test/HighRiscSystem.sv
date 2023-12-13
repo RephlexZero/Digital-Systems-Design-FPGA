@@ -1,10 +1,8 @@
-// HighRiscSystem
-// C T Clarke 
-// November 2015
-//
-// The HighRisc system module connects a 
-// HighRisc processor to memory and peripherals
-// via separate instruction and data busses.
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: HighRiscSystem
+// Description: The HighRisc system module connects a HighRisc processor to memory and peripherals via separate instruction and data busses.
+
 // The connections are (values in hex):
 // Module              Address     Size  Bus
 // Program Memory            0     4000   I
@@ -12,7 +10,7 @@
 // VGA display buffer     4000     4000   D
 // Switches SW0 to 9      C000        1   D
 // LEDs     LED0 to 9     C200        1   D
-//
+
 import InstructionSetPkg::*;
 
 module HighRiscSystem

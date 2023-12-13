@@ -1,3 +1,8 @@
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: RegisterFile
+// Description: this RegisterFile module implements a 16-bit register file by using a 1-D array
+
 module RegisterFile #(
     parameter AddressWidth = 6,
     parameter RegisterHeight = 1 << AddressWidth,

@@ -1,10 +1,7 @@
-// AluFpgaTop.sv
-// C T Clarke
-// 10/10/17
-//
-// This file implements an environment that the module
-// ArithmeticLogicUnit can sit in order to work on the 
-// DE1-SoC
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: AluFpgaTop
+// Description: this AluFpgaTop module connects the ArithmeticLogicUnit to the LEDs and switches by using the DE1-SoC
 
 // This package defines Opcodes and Flag structures.
 // Ensure that DataWidth in this package is set to 4 

@@ -1,11 +1,9 @@
-// top module to connect the VGA controller to the VGA port and monitor
-//
-// This file displays a pattern of colours in the monitor
-//
-// Uriel Martinez-Hernandez
-// November 2022
-
-
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: AluFpgaTop
+// Description: This AluFpgaTop module instantiates the ALU and connects it to the FPGA board
+// 				Top module to connect the VGA controller to the VGA port and monitor
+// 				This file displays a pattern of colours in the monitor
 
 module VgaTopFPGA
 (

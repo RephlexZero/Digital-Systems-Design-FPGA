@@ -1,3 +1,8 @@
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: ProgramCounter
+// Description: this ProgramCounter module implements a 16-bit program counter
+
 module ProgramCounter (
     input logic Clock, Reset, LoadEnable, OffsetEnable,
     input logic signed [15:0] LoadValue,

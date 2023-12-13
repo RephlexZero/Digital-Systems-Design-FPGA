@@ -1,11 +1,8 @@
-// ProgramCounter in FPGA
-//
-// Uriel Martinez-Hernandez
-//
-// November 2022
-//
-// This module links the PC with the FPGA standard pins
-//
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: PcFpgaTop
+// Description: This module links the PC with the FPGA standard pins 
+
 module PcFpgaTop
 (
 	input       [9:0]  SW,

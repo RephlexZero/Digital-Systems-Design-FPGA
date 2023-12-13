@@ -1,3 +1,8 @@
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: AluTb
+// Description: this testbench tests the flags and operation of the ALU through the use of a set of test cases
+
 `timescale 1ns / 1ps
 
 import InstructionSetPkg::*;

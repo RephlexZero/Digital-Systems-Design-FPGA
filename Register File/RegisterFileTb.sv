@@ -1,14 +1,7 @@
-// RegisterFileTestBench
-//
-// Uriel Martinez-Hernandez
-//
-// November 2022
-//
-// This module test the functionality of the Register File
-// NOTE:
-// THIS MODULE IS INCOMPLETE, YOU NEED TO ADD MORE LINES
-// OF CODE TO TEST ALL THE FUNCTIONALITIES OF YOUR MODULE
-//
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: RegisterFileTb
+// Description: this testbench tests the functionality of the RegisterFile module by using it to store and retrieve data
 
 module RegisterFileTB;
     // Parameters

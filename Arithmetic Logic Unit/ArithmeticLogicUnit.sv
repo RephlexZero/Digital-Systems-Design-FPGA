@@ -1,7 +1,7 @@
-// ArithmeticLogicUnit
-// This is a basic implementation of the essential operations needed
-// in the ALU. Adding further instructions to this file will increase 
-// your marks.
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: ArithemeticLogicUnit
+// Description: Implementation of all essential ALU operations through the use of a case statement
 
 // Load information about the instruction set. 
 import InstructionSetPkg::*;

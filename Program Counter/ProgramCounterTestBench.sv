@@ -1,13 +1,9 @@
-// ProgramCounterTestBench
-//
-//
-// This module implements a testbench for 
-// the Program Counter to be created in the
-// Digital Systems Design tutorial.
-// 
-// You need to add the code to test the
-// functionality of your PC
-//
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: ProgramCounterTestBench
+// Description: This module implements a testbench for the Program Counter
+//				We use this to verify the operation of the program counter
+//				By simulating testcases involving Reset, LoadValue, Offset, and Combination of inputs
 
 module ProgramCounterTestBench();
 

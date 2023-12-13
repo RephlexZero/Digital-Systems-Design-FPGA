@@ -1,4 +1,7 @@
-// VGA controller testbench
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: VgaTb
+// Description: this testbench tests the functionality of the VGA controller
 
 module VgaTb();
 

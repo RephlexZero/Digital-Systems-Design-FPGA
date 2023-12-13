@@ -1,6 +1,7 @@
-// VGA controller
-// Coursework activity 4
-// November 2022
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: VgaController
+// Description: this VgaController module implements a VGA controller by using counters to generate the sync signals and pixel positions
 
 module VgaController
 (

@@ -1,3 +1,8 @@
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: HighRiscProcessor
+// Description: This module implements the HighRiscProcessor through the use of the ALU, RegisterFile, ProgramCounter, FlagsRegister, and InstructionDecoder modules
+
 import InstructionSetPkg::*;
 
 module HighRiscProcessor

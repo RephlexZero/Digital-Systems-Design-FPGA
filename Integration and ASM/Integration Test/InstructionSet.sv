@@ -1,11 +1,7 @@
-// InstructionSetPkg
-//
-// C T Clarke
-//
-// 10/10/17
-//
-// This package is used to define all the values and types 
-// needed for the highRisc instruction set.
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: InstructionSetPkg
+// Description: This package is used to define all the values and types needed for the highRisc instruction set.
 
 package InstructionSetPkg;
  

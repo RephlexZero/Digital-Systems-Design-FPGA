@@ -1,12 +1,7 @@
-// InstructionSetPkg
-//
-// Uriel Martinez-Hernandez
-// (acknowledgements to C T Clarke)
-//
-// 1/11/18
-//
-// This package is used to define all the values and types 
-// needed for the highRisc instruction set.
+// Author(s): Kevin Huang and Jake Stewart
+// Date: 13/12/2023
+// Module name: InstructionSetPkg
+// Description: this InstructionSetPkg package defines the instruction set for the highRisc processor and the flags
 
 package InstructionSetPkg;
  

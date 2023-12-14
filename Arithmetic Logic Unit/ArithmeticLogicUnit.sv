@@ -75,51 +75,36 @@ module ArithmeticLogicUnit
 			ROR:	{OutDest, OutFlags.Carry} = {InFlags.Carry, InSrc};
 
 			ADC:	begin
-					// Take most significant bits of inputs and output
-					automatic logic msb_in_src = InSrc[DataWidth-1];
-					automatic logic msb_in_dest = InDest[DataWidth-1];
-					automatic logic msb_out_dest = OutDest[DataWidth-1];
-
 					OutDest = InSrc + InDest + InFlags.Carry;
 
 					OutFlags.Zero = OutDest == 0;
 					OutFlags.Negative = OutDest < 0;
-					OutFlags.Carry = (OutDest < InSrc) || (OutDest < InDest);
+					OutFlags.Carry = InSrc + InDest + InFlags.Carry >= 2**DataWidth;
 					OutFlags.Parity = ~^OutDest;
-					OutFlags.Overflow = (~msb_out_dest & msb_in_src & msb_in_dest) | (msb_out_dest & ~msb_in_src & ~msb_in_dest);
+					OutFlags.Overflow = (~OutDest[DataWidth-1] & InSrc[DataWidth-1] & InDest[DataWidth-1]) | (OutDest[DataWidth-1] & ~InSrc[DataWidth-1] & ~InDest[DataWidth-1]);
 				end
 
 			SUB:	begin
-					// Take most significant bits of inputs and output
-					automatic logic msb_in_src = InSrc[DataWidth-1];
-					automatic logic msb_in_dest = InDest[DataWidth-1];
-					automatic logic msb_out_dest = OutDest[DataWidth-1];
-
-
 					OutDest = InDest - (InSrc + InFlags.Carry);
 
 					OutFlags.Zero = OutDest == 0;
 					OutFlags.Negative = OutDest < 0;
 					OutFlags.Carry = InDest < (InSrc + InFlags.Carry);
 					OutFlags.Parity = ~^OutDest;
-					OutFlags.Overflow = (~msb_out_dest & ~msb_in_src & msb_in_dest) | (msb_out_dest & msb_in_src & ~msb_in_dest);
+					OutFlags.Overflow = (~OutDest[DataWidth-1] & ~InSrc[DataWidth-1] & InDest[DataWidth-1]) | (OutDest[DataWidth-1] & InSrc[DataWidth-1] & ~InDest[DataWidth-1]);
 				end
 
 			DIV:	begin
 					// Check for divide by zero
 					if (InSrc != 0) begin
 						OutDest = InDest / InSrc;
-
-						OutFlags.Zero = OutDest == 0;
-						OutFlags.Negative = OutDest < 0;
-						OutFlags.Parity = ~^OutDest;
 					end else begin
 						OutDest = 0;
-						
-						OutFlags.Zero = 1;
-						OutFlags.Negative = 0;
-						OutFlags.Parity = 1;
 					end
+					
+					OutFlags.Zero = OutDest == 0;
+					OutFlags.Negative = OutDest < 0;
+					OutFlags.Parity = ~^OutDest;
 				end
 
 			MOD:	begin
@@ -130,21 +115,30 @@ module ArithmeticLogicUnit
 					OutFlags.Parity = ~^OutDest;
 				end
 
-			MUL:	begin
-					OutDest = InDest * InSrc;
+			// ***** ONLY CHANGES ABOVE THIS LINE ARE ASSESSED	*****		
 
-					OutFlags.Zero = OutDest == 0;
-					OutFlags.Negative = 0;
-					OutFlags.Parity = ~^OutDest;
+			MUL:	begin
+					reg signed [2*DataWidth-1:0] Product;
+
+					Product = InDest * InSrc;
+
+					OutFlags.Zero = Product == 0;
+					OutFlags.Negative = Product < 0;
+					OutFlags.Parity = ~^Product;
+
+					OutDest = Product[2*DataWidth-1:DataWidth];  // Upper bits of multiplication
 				end
 
 			MUH:	begin
-					OutDest = (InDest * InSrc) >> DataWidth;
+					reg signed [2*DataWidth-1:0] Product;
 
-					OutFlags.Zero = OutDest == 0;
-					OutFlags.Negative = OutDest < 0;
-					OutFlags.Parity = ~^OutDest;
-				
+					Product = InDest * InSrc;
+
+					OutFlags.Zero = Product == 0;
+					OutFlags.Negative = Product < 0;
+					OutFlags.Parity = ~^Product;
+
+					OutDest = Product[2*DataWidth-1:DataWidth];  // Upper bits of multiplication
 				end
 			
 			// ***** ONLY CHANGES ABOVE THIS LINE ARE ASSESSED	*****		

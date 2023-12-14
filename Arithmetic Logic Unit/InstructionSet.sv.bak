@@ -9,7 +9,7 @@ package InstructionSetPkg;
 	// FPGA. This is because the hardware doesn't have enough
 	// switches. For simulation, and the overall processor 
 	// configuration, set the value to 16.
-	parameter DataWidth       = 16;
+	parameter DataWidth       = 4;
 	
 	// An example of an enumerated type that defines the names
 	// for all of the instruction set opcodes.

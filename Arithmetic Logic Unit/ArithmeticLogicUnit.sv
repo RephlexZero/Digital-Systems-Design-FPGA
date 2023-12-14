@@ -126,7 +126,7 @@ module ArithmeticLogicUnit
 					OutFlags.Negative = Product < 0;
 					OutFlags.Parity = ~^Product;
 
-					OutDest = Product[2*DataWidth-1:DataWidth];  // Upper bits of multiplication
+					OutDest = Product[DataWidth-1:0];  // Lower bits of multiplication
 				end
 
 			MUH:	begin

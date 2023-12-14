@@ -8,14 +8,16 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	AluFpgaTop
 
-} {} {}} {/home/jake/Documents/EE20021/Arithmetic Logic Unit/AluTb.sv} {1 {vlog -work work -sv -stats=none {/home/jake/Documents/EE20021/Arithmetic Logic Unit/AluTb.sv}
+} {} {}} {/home/jake/Documents/EE20021/Arithmetic Logic Unit/ArithmeticLogicUnit.sv} {2 {vlog -work work -sv -stats=none {/home/jake/Documents/EE20021/Arithmetic Logic Unit/ArithmeticLogicUnit.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling package AluTb_sv_unit
+** Warning: /home/jake/Documents/EE20021/Arithmetic Logic Unit/ArithmeticLogicUnit.sv(19): (vlog-13314) Defaulting port 'InFlags' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling package ArithmeticLogicUnit_sv_unit
 -- Importing package InstructionSetPkg
--- Compiling module AluTb
+-- Compiling module ArithmeticLogicUnit
+** Warning: /home/jake/Documents/EE20021/Arithmetic Logic Unit/ArithmeticLogicUnit.sv(19): (vlog-13314) Defaulting port 'InFlags' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 
 Top level modules:
-	AluTb
+	ArithmeticLogicUnit
 
 } {} {}} {/home/jake/Documents/EE20021/VGA Controller/VgaTopFPGA.sv} {1 {vlog -work work -sv -stats=none {/home/jake/Documents/EE20021/VGA Controller/VgaTopFPGA.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

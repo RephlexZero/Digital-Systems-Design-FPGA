@@ -620,3 +620,784 @@ run -all
 # Error in MUH operation at time               518000
 # Error in MUH operation at time               529000
 # End of tests
+add wave -position end sim:/AluTb/*
+run -all
+add wave -position insertpoint sim:/AluTb/*
+add wave -position insertpoint sim:/AluTb/*
+vsim work.AluTb
+# End time: 19:20:12 on Dec 14,2023, Elapsed time: 0:02:12
+# Errors: 0, Warnings: 1
+# vsim work.AluTb 
+# Start time: 19:20:12 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position end sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Error in DIV operation at time               405000
+# Error in DIV operation at time               427000
+# Start of MOD tests
+# Error in MOD operation at time               439000
+# Start of MUL tests
+# Error in MUL operation at time               473000
+# Error in MUL operation at time               484000
+# Error in MUL operation at time               495000
+# Start of MUH tests
+# Error in MUH operation at time               507000
+# Error in MUH operation at time               518000
+# Error in MUH operation at time               529000
+# End of tests
+# WARNING: No extended dataflow license exists
+add dataflow /AluTb/InFlags
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 19:47:16 on Dec 14,2023, Elapsed time: 0:27:04
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 19:47:16 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Error in DIV operation at time               427000
+# Error in DIV operation at time               438000
+# Error in DIV operation at time               449000
+# Start of MOD tests
+# Error in MOD operation at time               461000
+# Start of MUL tests
+# Error in MUL operation at time               495000
+# Error in MUL operation at time               506000
+# Error in MUL operation at time               517000
+# Start of MUH tests
+# Error in MUH operation at time               529000
+# Error in MUH operation at time               540000
+# Error in MUH operation at time               551000
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 19:51:16 on Dec 14,2023, Elapsed time: 0:04:00
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 19:51:16 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# Error in MOD operation at time               461000
+# Start of MUL tests
+# Error in MUL operation at time               495000
+# Error in MUL operation at time               506000
+# Error in MUL operation at time               517000
+# Start of MUH tests
+# Error in MUH operation at time               529000
+# Error in MUH operation at time               540000
+# Error in MUH operation at time               551000
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 20:32:28 on Dec 14,2023, Elapsed time: 0:41:12
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 20:32:28 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# Error in MOD operation at time               461000
+# Start of MUL tests
+# Error in MUL operation at time               495000
+# Error in MUL operation at time               506000
+# Error in MUL operation at time               517000
+# Start of MUH tests
+# Error in MUH operation at time               529000
+# Error in MUH operation at time               540000
+# Error in MUH operation at time               551000
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 20:49:55 on Dec 14,2023, Elapsed time: 0:17:27
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 20:49:55 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# DIV operation:     20 /     -3 =      2, expected          -2 at time               516000
+# Start of MUL tests
+# Start of MUH tests
+# Error in MUH operation at time               528000
+# Error in MUH operation at time               539000
+# Error in MUH operation at time               550000
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 20:50:58 on Dec 14,2023, Elapsed time: 0:01:03
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 20:50:58 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# MOD operation:     20 /     -3 =      2, expected          -2 at time               516000
+# Start of MUL tests
+# Start of MUH tests
+# Error in MUH operation at time               528000
+# Error in MUH operation at time               539000
+# Error in MUH operation at time               550000
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv failed with 5 errors.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 1 failed with 5 errors.
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv failed with 5 errors.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 1 failed with 5 errors.
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+add wave -position insertpoint sim:/AluTb/*
+# End time: 21:04:17 on Dec 14,2023, Elapsed time: 0:13:19
+# Errors: 0, Warnings: 4
+# vsim work.AluTb 
+# Start time: 21:04:17 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# MOD operation:     20 %     -3 =      2, expected          -1 at time               516000
+# Start of MUL tests
+# Start of MUH tests
+# Error in MUH operation at time               528000
+# Error in MUH operation at time               539000
+# Error in MUH operation at time               550000
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 21:09:10 on Dec 14,2023, Elapsed time: 0:04:53
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 21:09:10 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# MOD operation:     20 %     -3 =      2, expected          -1 at time               816000
+# Start of MUL tests
+# Start of MUH tests
+# Error in MUH operation at time               878000
+# Error in MUH operation at time               889000
+# Error in MUH operation at time               900000
+# End of tests
+# A time value could not be extracted from the current line
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 21:11:11 on Dec 14,2023, Elapsed time: 0:02:01
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 21:11:11 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# MOD operation:     20 %     -3 =      2, expected          -1 at time               816000
+# Start of MUL tests
+# Start of MUH tests
+# Error in MUH operation at time               878000
+# Error in MUH operation at time               889000
+# Error in MUH operation at time               900000
+# End of tests
+run -all
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 21:27:54 on Dec 14,2023, Elapsed time: 0:16:43
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 21:27:54 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# Start of MUL tests
+# Error in MUL operation at time               867000
+# Start of MUH tests
+# Error in MUH operation at time               918000
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 21:29:31 on Dec 14,2023, Elapsed time: 0:01:37
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 21:29:31 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# Start of MUL tests
+# Error in MUL operation at time               867000
+# Start of MUH tests
+# Error in MUH operation at time               918000
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 21:47:00 on Dec 14,2023, Elapsed time: 0:17:29
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 21:47:00 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# Start of MUL tests
+# Error in MUL operation at time               867000
+# Start of MUH tests
+# Error in MUH operation at time               918000
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 21:48:07 on Dec 14,2023, Elapsed time: 0:01:07
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 21:48:07 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# Start of MUL tests
+# Error in MUL operation at time               867000
+# Start of MUH tests
+# Error in MUH operation at time               918000
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 21:50:23 on Dec 14,2023, Elapsed time: 0:02:16
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 21:50:23 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# Start of MUL tests
+# Start of MUH tests
+# Error in MUH operation at time               918000
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 21:52:45 on Dec 14,2023, Elapsed time: 0:02:22
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 21:52:45 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# Start of MUL tests
+# Start of MUH tests
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 22:02:54 on Dec 14,2023, Elapsed time: 0:10:09
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 22:02:54 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# Start of MUL tests
+# Error in MUL operation at time               878000
+# Start of MUH tests
+# Error in MUL operation at time               940000
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 22:21:08 on Dec 14,2023, Elapsed time: 0:18:14
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 22:21:08 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# Start of MUL tests
+# Error in MUL operation at time               878000
+# Start of MUH tests
+# Error in MUL operation at time               940000
+# End of tests
+# Compile of VgaController.sv was successful.
+# Compile of VgaTb.sv was successful.
+# Compile of VgaTopFPGA.sv was successful.
+# Compile of AluFpgaTop.sv was successful.
+# Compile of AluTb.sv was successful.
+# Compile of ArithmeticLogicUnit.sv was successful with warnings.
+# Compile of InstructionSet.sv was successful.
+# Compile of PcFpgaTop.sv was successful.
+# Compile of ProgramCounter.sv was successful.
+# Compile of ProgramCounterTestBench.sv was successful.
+# Compile of RegisterFile.sv was successful.
+# Compile of RegisterFileTb.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim work.AluTb
+# End time: 22:24:31 on Dec 14,2023, Elapsed time: 0:03:23
+# Errors: 0, Warnings: 2
+# vsim work.AluTb 
+# Start time: 22:24:31 on Dec 14,2023
+# Loading sv_std.std
+# Loading work.InstructionSetPkg
+# Loading work.AluTb_sv_unit
+# Loading work.AluTb
+# Loading work.ArithmeticLogicUnit_sv_unit
+# Loading work.ArithmeticLogicUnit
+add wave -position insertpoint sim:/AluTb/*
+run -all
+# Start of NAND tests
+# Start of ADC tests
+# Start of LIU tests
+# Start of MOVE tests
+# Start of NOR tests
+# Start of ROR tests
+# Start of SUB tests
+# Start of DIV tests
+# Start of MOD tests
+# Start of MUL tests
+# Start of MUH tests
+# End of tests

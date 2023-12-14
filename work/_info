@@ -13,7 +13,7 @@ vAluFpgaTop
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
 Z1 DXx4 work 17 InstructionSetPkg 0 22 ]Uf^ahLX4Sc@?n3I:Y<ML1
 Z2 DXx4 work 18 AluFpgaTop_sv_unit 0 22 :2FXd[7T`iJAe7gnmccmD2
-Z3 !s110 1702580936
+Z3 !s110 1702592668
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
@@ -26,11 +26,11 @@ Z6 d/home/jake/Documents/EE20021
 Z7 w1702572945
 Z8 8/home/jake/Documents/EE20021/Arithmetic Logic Unit/AluFpgaTop.sv
 Z9 F/home/jake/Documents/EE20021/Arithmetic Logic Unit/AluFpgaTop.sv
-!i122 133
+!i122 364
 L0 49 33
 Z10 OV;L;2020.1;71
 31
-Z11 !s108 1702580935.000000
+Z11 !s108 1702592668.000000
 Z12 !s107 /home/jake/Documents/EE20021/Arithmetic Logic Unit/AluFpgaTop.sv|
 Z13 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/jake/Documents/EE20021/Arithmetic Logic Unit/AluFpgaTop.sv|
 !i113 1
@@ -53,7 +53,7 @@ R6
 R7
 R8
 R9
-!i122 133
+!i122 364
 L0 9 0
 R10
 31
@@ -67,25 +67,25 @@ n@alu@fpga@top_sv_unit
 vAluTb
 R0
 R1
-DXx4 work 13 AluTb_sv_unit 0 22 `VWD<SCfA1[YO=jDjCBId2
+DXx4 work 13 AluTb_sv_unit 0 22 n4PkgJY^Vj1FiGT_;_HcD2
 R3
 R4
 r1
 !s85 0
 !i10b 1
-!s100 I]iWG91A?@R]755`H@[ha3
-IZGGF43HWV?B`MzGlRWlfi1
+!s100 ?^b;lSSi1B3EhYB43THQ?0
+I2DPl4^3L[dzNhbG`d[aIg3
 !s105 AluTb_sv_unit
 S1
 R6
-R7
-Z16 8/home/jake/Documents/EE20021/Arithmetic Logic Unit/AluTb.sv
-Z17 F/home/jake/Documents/EE20021/Arithmetic Logic Unit/AluTb.sv
-!i122 134
-L0 12 266
+Z16 w1702592662
+Z17 8/home/jake/Documents/EE20021/Arithmetic Logic Unit/AluTb.sv
+Z18 F/home/jake/Documents/EE20021/Arithmetic Logic Unit/AluTb.sv
+!i122 365
+L0 12 267
 R10
 31
-Z18 !s108 1702580936.000000
+R11
 Z19 !s107 /home/jake/Documents/EE20021/Arithmetic Logic Unit/AluTb.sv|
 Z20 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/jake/Documents/EE20021/Arithmetic Logic Unit/AluTb.sv|
 !i113 1
@@ -96,23 +96,23 @@ XAluTb_sv_unit
 R0
 R1
 R3
-V`VWD<SCfA1[YO=jDjCBId2
+Vn4PkgJY^Vj1FiGT_;_HcD2
 r1
 !s85 0
 !i10b 1
-!s100 fiAZX=0nSV<F`A^:PiHhj2
-I`VWD<SCfA1[YO=jDjCBId2
+!s100 cdWcKCZ[h<TADaG8kaW>a3
+In4PkgJY^Vj1FiGT_;_HcD2
 !i103 1
 S1
 R6
-R7
 R16
 R17
-!i122 134
+R18
+!i122 365
 L0 8 0
 R10
 31
-R18
+R11
 R19
 R20
 !i113 1
@@ -123,26 +123,26 @@ vArithmeticLogicUnit
 R0
 R1
 DXx4 work 27 ArithmeticLogicUnit_sv_unit 0 22 7GXCL5N?<eKL;RG7B2:MV2
-Z21 !s110 1702581472
+R3
 R4
 r1
 !s85 0
 !i10b 1
-!s100 adkD7GYNN>5e^K7E1T[2e3
-IKG<[L]@CD_AzM^7maFCNn3
+!s100 `a3^1LkV0lE;=cbDA:^S^2
+I`?]NTh0Pj;6hm7imNh6SA0
 !s105 ArithmeticLogicUnit_sv_unit
 S1
 R6
-Z22 w1702581458
-Z23 8/home/jake/Documents/EE20021/Arithmetic Logic Unit/ArithmeticLogicUnit.sv
-Z24 F/home/jake/Documents/EE20021/Arithmetic Logic Unit/ArithmeticLogicUnit.sv
-!i122 144
+Z21 w1702590757
+Z22 8/home/jake/Documents/EE20021/Arithmetic Logic Unit/ArithmeticLogicUnit.sv
+Z23 F/home/jake/Documents/EE20021/Arithmetic Logic Unit/ArithmeticLogicUnit.sv
+!i122 366
 L0 10 143
 R10
 31
-Z25 !s108 1702581472.000000
-!s107 /home/jake/Documents/EE20021/Arithmetic Logic Unit/ArithmeticLogicUnit.sv|
-Z26 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/jake/Documents/EE20021/Arithmetic Logic Unit/ArithmeticLogicUnit.sv|
+R11
+Z24 !s107 /home/jake/Documents/EE20021/Arithmetic Logic Unit/ArithmeticLogicUnit.sv|
+Z25 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/jake/Documents/EE20021/Arithmetic Logic Unit/ArithmeticLogicUnit.sv|
 !i113 1
 R14
 R15
@@ -150,7 +150,7 @@ n@arithmetic@logic@unit
 XArithmeticLogicUnit_sv_unit
 R0
 R1
-R21
+R3
 V7GXCL5N?<eKL;RG7B2:MV2
 r1
 !s85 0
@@ -160,16 +160,16 @@ I7GXCL5N?<eKL;RG7B2:MV2
 !i103 1
 S1
 R6
+R21
 R22
 R23
-R24
-!i122 144
+!i122 366
 L0 7 0
 R10
 31
+R11
+R24
 R25
-Z27 !s107 /home/jake/Documents/EE20021/Arithmetic Logic Unit/ArithmeticLogicUnit.sv|
-R26
 !i113 1
 R14
 R15
@@ -179,23 +179,23 @@ R0
 R3
 !i10b 1
 !s100 P:6_DYjlNa?:BJ>1VP4HI2
-Z28 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z26 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IMSlESj_Oz_oKbTk=:4k^m2
 R4
 S1
 R6
 R7
-Z29 8/home/jake/Documents/EE20021/Program Counter/PcFpgaTop.sv
-Z30 F/home/jake/Documents/EE20021/Program Counter/PcFpgaTop.sv
-!i122 137
+Z27 8/home/jake/Documents/EE20021/Program Counter/PcFpgaTop.sv
+Z28 F/home/jake/Documents/EE20021/Program Counter/PcFpgaTop.sv
+!i122 368
 L0 124 46
 R10
 r1
 !s85 0
 31
-R18
-Z31 !s107 /home/jake/Documents/EE20021/Program Counter/PcFpgaTop.sv|
-Z32 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/jake/Documents/EE20021/Program Counter/PcFpgaTop.sv|
+R11
+Z29 !s107 /home/jake/Documents/EE20021/Program Counter/PcFpgaTop.sv|
+Z30 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/jake/Documents/EE20021/Program Counter/PcFpgaTop.sv|
 !i113 1
 R14
 R15
@@ -205,23 +205,23 @@ R0
 R3
 !i10b 1
 !s100 _oXHIH8j2Hn0TGOHK;fIj1
-R28
+R26
 INz[9[e8SX_CT2S701U=In0
 R4
 S1
 R6
 R7
-R29
-R30
-!i122 137
+R27
+R28
+!i122 368
 L0 94 27
 R10
 r1
 !s85 0
 31
-R18
-R31
-R32
+R11
+R29
+R30
 !i113 1
 R14
 R15
@@ -231,7 +231,7 @@ R0
 R3
 !i10b 1
 !s100 _MYcj1n60oDizfo_eAW751
-R28
+R26
 I]Uf^ahLX4Sc@?n3I:Y<ML1
 V]Uf^ahLX4Sc@?n3I:Y<ML1
 S1
@@ -239,13 +239,13 @@ R6
 w1702579004
 8/home/jake/Documents/EE20021/Arithmetic Logic Unit/InstructionSet.sv
 F/home/jake/Documents/EE20021/Arithmetic Logic Unit/InstructionSet.sv
-!i122 136
+!i122 367
 L0 6 0
 R10
 r1
 !s85 0
 31
-R18
+R11
 !s107 /home/jake/Documents/EE20021/Arithmetic Logic Unit/InstructionSet.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/jake/Documents/EE20021/Arithmetic Logic Unit/InstructionSet.sv|
 !i113 1
@@ -257,23 +257,23 @@ R0
 R3
 !i10b 1
 !s100 UlX7JcOB31j47CLBgDV?D2
-R28
+R26
 I<>48H_oMA:d<Ja@@0KDK73
 R4
 S1
 R6
 R7
-R29
-R30
-!i122 137
-Z33 L0 6 39
+R27
+R28
+!i122 368
+Z31 L0 6 39
 R10
 r1
 !s85 0
 31
-R18
-R31
-R32
+R11
+R29
+R30
 !i113 1
 R14
 R15
@@ -283,7 +283,7 @@ R0
 R3
 !i10b 1
 !s100 CigIOMajY:Y@:B0z01oBN2
-R28
+R26
 I^7`D7<i`nUm`U7nnnWfzI3
 R4
 S1
@@ -291,13 +291,13 @@ R6
 R7
 8/home/jake/Documents/EE20021/Program Counter/ProgramCounter.sv
 F/home/jake/Documents/EE20021/Program Counter/ProgramCounter.sv
-!i122 138
+!i122 369
 L0 6 18
 R10
 r1
 !s85 0
 31
-R18
+R11
 !s107 /home/jake/Documents/EE20021/Program Counter/ProgramCounter.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/jake/Documents/EE20021/Program Counter/ProgramCounter.sv|
 !i113 1
@@ -309,7 +309,7 @@ R0
 R3
 !i10b 1
 !s100 gb5WjcU[:F3?=B2V6:cnz2
-R28
+R26
 IA@A2XhXL[1nPnKCh]62ZJ1
 R4
 S1
@@ -317,13 +317,13 @@ R6
 R7
 8/home/jake/Documents/EE20021/Program Counter/ProgramCounterTestBench.sv
 F/home/jake/Documents/EE20021/Program Counter/ProgramCounterTestBench.sv
-!i122 139
+!i122 370
 L0 8 75
 R10
 r1
 !s85 0
 31
-R18
+R11
 !s107 /home/jake/Documents/EE20021/Program Counter/ProgramCounterTestBench.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/jake/Documents/EE20021/Program Counter/ProgramCounterTestBench.sv|
 !i113 1
@@ -335,7 +335,7 @@ R0
 R3
 !i10b 1
 !s100 P][obNnnDS3;oZ36bMe?Y0
-R28
+R26
 I3OT1?_N>ET0h;9FLndhJ53
 R4
 S1
@@ -343,13 +343,13 @@ R6
 R7
 8/home/jake/Documents/EE20021/Register File/RegisterFile.sv
 F/home/jake/Documents/EE20021/Register File/RegisterFile.sv
-!i122 140
+!i122 371
 L0 6 26
 R10
 r1
 !s85 0
 31
-R18
+R11
 !s107 /home/jake/Documents/EE20021/Register File/RegisterFile.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/jake/Documents/EE20021/Register File/RegisterFile.sv|
 !i113 1
@@ -361,7 +361,7 @@ R0
 R3
 !i10b 1
 !s100 mf=W;z1zR@LI43WWTWLXM2
-R28
+R26
 IjYkGYhB]S=L9TdGbgJFGD2
 R4
 S1
@@ -369,13 +369,13 @@ R6
 R7
 8/home/jake/Documents/EE20021/Register File/RegisterFileTb.sv
 F/home/jake/Documents/EE20021/Register File/RegisterFileTb.sv
-!i122 141
-Z34 L0 6 63
+!i122 372
+Z32 L0 6 63
 R10
 r1
 !s85 0
 31
-R18
+R11
 !s107 /home/jake/Documents/EE20021/Register File/RegisterFileTb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/jake/Documents/EE20021/Register File/RegisterFileTb.sv|
 !i113 1
@@ -387,23 +387,23 @@ R0
 R3
 !i10b 1
 !s100 XQ_o;nRiHa:n_[REcQDbo0
-R28
+R26
 IVTVLY5Pe7oL`6nN95g@9i2
 R4
 S1
 R6
 R7
-R29
-R30
-!i122 137
+R27
+R28
+!i122 368
 L0 55 36
 R10
 r1
 !s85 0
 31
-R18
-R31
-R32
+R11
+R29
+R30
 !i113 1
 R14
 R15
@@ -425,7 +425,7 @@ R6
 R7
 R8
 R9
-!i122 133
+!i122 364
 L0 16 30
 R10
 31
@@ -438,10 +438,10 @@ R15
 n@signed@decoder
 vVgaController
 R0
-Z35 !s110 1702580935
+R3
 !i10b 1
 !s100 KYc>A6<3;kO^7QUWNQ7k73
-R28
+R26
 I0V?FEI6F;idh>_h7JNfK]1
 R4
 S1
@@ -449,8 +449,8 @@ R6
 R7
 8/home/jake/Documents/EE20021/VGA Controller/VgaController.sv
 F/home/jake/Documents/EE20021/VGA Controller/VgaController.sv
-!i122 130
-R34
+!i122 361
+R32
 R10
 r1
 !s85 0
@@ -464,10 +464,10 @@ R15
 n@vga@controller
 vVgaTb
 R0
-R35
+R3
 !i10b 1
 !s100 SbWn90UF]RWN@DDe5Vc9I3
-R28
+R26
 IS]TeE6deim6Ki[m80Z`L^3
 R4
 S1
@@ -475,8 +475,8 @@ R6
 R7
 8/home/jake/Documents/EE20021/VGA Controller/VgaTb.sv
 F/home/jake/Documents/EE20021/VGA Controller/VgaTb.sv
-!i122 131
-R33
+!i122 362
+R31
 R10
 r1
 !s85 0
@@ -490,10 +490,10 @@ R15
 n@vga@tb
 vVgaTopFPGA
 R0
-R35
+R3
 !i10b 1
 !s100 TKbDhOdH4Po57[;]?i2OF0
-R28
+R26
 IHNSfHiQX7d>hj9?T9Z=Jf0
 R4
 S1
@@ -501,7 +501,7 @@ R6
 R7
 8/home/jake/Documents/EE20021/VGA Controller/VgaTopFPGA.sv
 F/home/jake/Documents/EE20021/VGA Controller/VgaTopFPGA.sv
-!i122 132
+!i122 363
 L0 8 45
 R10
 r1

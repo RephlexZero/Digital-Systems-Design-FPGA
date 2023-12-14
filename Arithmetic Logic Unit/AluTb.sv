@@ -111,6 +111,7 @@ module AluTb();
 		
 		#10 InImm = 6'h3F;      
 	   #1 if (OutDest != 16'hFAAA) $display("Error in LIU operation at time %t",$time);
+		#50;
 
 	
 
@@ -131,6 +132,7 @@ module AluTb();
 
 		#10 InSrc = 16'hFFFF;
 		#1 if (OutDest != 16'hFFFF) $display("Error in MOVE operation at time %t",$time);
+		#50;
 
 
 		$display ("Start of NOR tests");
@@ -148,6 +150,7 @@ module AluTb();
 
 		#10 InSrc = 16'hFFFF;
 		#1 if (OutDest != 16'h0000) $display("Error in NOR operation at time %t",$time);
+		#50;
 
 
 		$display ("Start of ROR tests");
@@ -168,6 +171,7 @@ module AluTb();
 
 		#10 InFlags.Carry = '1;
 		#1 if (OutDest != 16'hFFFF) $display("Error in ROR operation at time %t",$time);
+		#50;
 
 
 		$display ("Start of SUB tests");
@@ -188,87 +192,84 @@ module AluTb();
 
 		#10 InFlags.Carry = '1;
 		#1 if (OutDest != 16'hAAAA) $display("Error in SUB operation at time %t",$time);
+		#50;
 
 		
 		$display ("Start of DIV tests");
 		Operation = DIV;
 
-		InDest = 16'h0000;
-		InSrc = 16'hFFFF;
-		#1 if (OutDest != 16'h0000) $display("Error in DIV operation at time %t",$time);
+		InDest = 15;
+		InSrc = 5;
+		#1 if (OutDest != 3) $display("DIV operation: %d / %d = %d, expected %d at time %t", InDest, InSrc, OutDest, 3, $time);
 
-		#10 InDest = 16'hAAAA;
-		InSrc = 16'hFFFF;
-		#1 if (OutDest != 16'h0000) $display("Error in DIV operation at time %t",$time);
+		#10 InDest = 15;
+		InSrc = -5;
+		#1 if (OutDest != -3) $display("DIV operation: %d / %d = %d, expected %d at time %t", InDest, InSrc, OutDest, -3, $time);
 
-		#10 InDest = 16'hAAAA;
-		InSrc = 16'h0001;
-		#1 if (OutDest != 16'hAAAA) $display("Error in DIV operation at time %t",$time);
+		#10 InDest = 1234;
+		InSrc = 1;
+		#1 if (OutDest != 1234) $display("DIV operation: %d / %d = %d, expected %d at time %t", InDest, InSrc, OutDest, 1234, $time);
 
-		#10 InDest = 16'hAAAA;
-		InSrc = 16'h0002;
-		#1 if (OutDest != 16'h5555) $display("Error in DIV operation at time %t",$time);
+		#10 InDest = 1234;
+		InSrc = -1;
+		#1 if (OutDest != -1234) $display("DIV operation: %d / %d = %d, expected %d at time %t", InDest, InSrc, OutDest, -1234, $time);
 
+		#10 InDest = 5;
+		InSrc = 100;
+		#1 if (OutDest != 0) $display("DIV operation: %d / %d = %d, expected %d at time %t", InDest, InSrc, OutDest, 0, $time);
+
+		#10 InDest = 5;
+		InSrc = -100;
+		#1 if (OutDest != -0) $display("DIV operation: %d / %d = %d, expected %d at time %t", InDest, InSrc, OutDest, -0, $time);
+		
+		#10 InDest = 102;
+		InSrc = 5;
+		#1 if (OutDest != 20) $display("DIV operation: %d / %d = %d, expected %d at time %t", InDest, InSrc, OutDest, 20, $time);
+
+		#10 InDest = 103;
+		InSrc = -20;
+		#1 if (OutDest != -5) $display("DIV operation: %d / %d = %d, expected %d at time %t", InDest, InSrc, OutDest, -5, $time);
+		#50;
 
 		$display ("Start of MOD tests");
 		Operation = MOD;
+		InDest = 15;
+		InSrc = 5;
+		#1 if (OutDest != 0) $display("MOD operation: %d %% %d = %d, expected %d at time %t", InDest, InSrc, OutDest, 0, $time);
 
-		InDest = 16'h0000;	
-		InSrc = 16'hFFFF;
-		#1 if (OutDest != 16'h0000) $display("Error in MOD operation at time %t",$time);
+		#10 InDest = 15;
+		InSrc = -5;
+		#1 if (OutDest != -0) $display("MOD operation: %d %% %d = %d, expected %d at time %t", InDest, InSrc, OutDest, -0, $time);
 
-		#10 InDest = 16'hAAAA;
-		InSrc = 16'hFFFF;
-		#1 if (OutDest != 16'hAAAA) $display("Error in MOD operation at time %t",$time);
+		#10 InDest = -33;
+		InSrc = 2;
+		#1 if (OutDest != -1) $display("MOD operation: %d %% %d = %d, expected %d at time %t", InDest, InSrc, OutDest, -1, $time);
 
-		#10 InDest = 16'hAAAA;
-		InSrc = 16'h0001;
-		#1 if (OutDest != 16'h0000) $display("Error in MOD operation at time %t",$time);
+		#10 InDest = 20;
+		InSrc = 3;
+		#1 if (OutDest != 2) $display("MOD operation: %d %% %d = %d, expected %d at time %t", InDest, InSrc, OutDest, 2, $time);
 
-		#10 InDest = 16'hAAAA;
-		InSrc = 16'h0002;
-		#1 if (OutDest != 16'h0000) $display("Error in MOD operation at time %t",$time);
-
+		#10 InDest = 20;
+		InSrc = -3;
+		#1 if (OutDest != 2) $display("MOD operation: %d %% %d = %d, expected %d at time %t", InDest, InSrc, OutDest, 2, $time);
+		#50;
 
 		$display ("Start of MUL tests");
 		Operation = MUL;
 
-		InDest = 16'h0000;
-		InSrc = 16'hFFFF;
-		#1 if (OutDest != 16'h0000) $display("Error in MUL operation at time %t",$time);
-
-		#10 InDest = 16'hAAAA;
-		InSrc = 16'hFFFF;
-		#1 if (OutDest != 16'h5554) $display("Error in MUL operation at time %t",$time);
-
-		#10 InDest = 16'hAAAA;
-		InSrc = 16'h0001;
-		#1 if (OutDest != 16'hAAAA) $display("Error in MUL operation at time %t",$time);
-
-		#10 InDest = 16'hAAAA;
-		InSrc = 16'h0002;
-		#1 if (OutDest != 16'h1554) $display("Error in MUL operation at time %t",$time);
-
+		InDest = 'h0FFF;
+		InSrc = 'h0FFF;
+		#1 if (OutDest != 16'hE001) $display("Error in MUL operation at time %t",$time);
+		#50;
 
 		$display ("Start of MUH tests");
 		Operation = MUH;
 
-		InDest = 16'h0000;
-		InSrc = 16'hFFFF;
-		#1 if (OutDest != 16'h0000) $display("Error in MUH operation at time %t",$time);
-
-		#10 InDest = 16'hAAAA;
-		InSrc = 16'hFFFF;
-		#1 if (OutDest != 16'h5554) $display("Error in MUH operation at time %t",$time);
-
-		#10 InDest = 16'hAAAA;
-		InSrc = 16'h0001;
-		#1 if (OutDest != 16'hAAAA) $display("Error in MUH operation at time %t",$time);
-
-		#10 InDest = 16'hAAAA;
-		InSrc = 16'h0002;
-		#1 if (OutDest != 16'h1554) $display("Error in MUH operation at time %t",$time);
-
+		InDest = 16'h0FFF;
+		InSrc = 16'h0FFF;
+		#1 if (OutDest != 16'h00FF) $display("Error in MUH operation at time %t",$time);
+		#10;
+		#50;
 		// End of instruction simulation
 
 
